@@ -709,7 +709,7 @@ class Html
                     break;
                 case 'font-family':
                     $value = array_map('trim', explode(',', $value));
-                    $styles['name'] = ucwords($value[0]);
+                    $styles['name'] = str_replace("'","",ucwords($cValue[0]));
 
                     break;
                 case 'color':
